@@ -13,6 +13,16 @@ The workspace repository does not build or release either project. Make code
 changes in the relevant submodule and use this repository for shared
 documentation, workspace configuration, and recording submodule revisions.
 
+## Local workspace commands
+
+From this workspace root, `./startup.sh obs` builds the OBS plugin and
+installs it only when the installed `hd-obs.plugin` differs from the current
+build. `./startup.sh web` starts the Hands Diff development server.
+`./startup.sh` performs both actions in that order. `./install.sh` always
+reinstalls the OBS plugin, creates the local web environment file when needed,
+starts and migrates the local Postgres database, and then creates a production
+Hands Diff web build.
+
 ## Clone the workspace
 
 Clone with its submodules:
