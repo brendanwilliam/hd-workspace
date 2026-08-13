@@ -2,35 +2,64 @@
 
 set -euo pipefail
 
-workspace_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+script_path="${BASH_SOURCE[0]}"
+while [[ -L "$script_path" ]]; do
+  script_dir="$(cd -P -- "$(dirname -- "$script_path")" && pwd)"
+  script_path="$(readlink -- "$script_path")"
+  [[ "$script_path" == /* ]] || script_path="$script_dir/$script_path"
+done
+
+workspace_dir="$(cd -P -- "$(dirname -- "$script_path")" && pwd)"
 obs_project_dir="$workspace_dir/hd-obs"
 web_project_dir="$workspace_dir/hd-web"
 obs_plugins_dir="$HOME/Library/Application Support/obs-studio/plugins"
 obs_plugin_bundle="$obs_plugins_dir/hd-obs.plugin"
 obs_build_bundle="$obs_project_dir/build_macos/RelWithDebInfo/hd-obs.plugin"
 
-ensure_obs_plugin() {
-  if [[ "$(uname)" != "Darwin" ]]; then
-    echo "The OBS plugin can only be installed from macOS." >&2
+configure_obs_build() {
+  local cache_file="$obs_project_dir/build_macos/CMakeCache.txt"
+  local cached_source_dir=""
+
+  if [[ -f "$cache_file" ]]; then
+    cached_source_dir="$(sed -n 's|^CMAKE_HOME_DIRECTORY:INTERNAL=||p' "$cache_file")"
+  fi
+
+  if [[ -n "$cached_source_dir" && "$cached_source_dir" != "$obs_project_dir" ]]; then
+    echo "Refreshing the OBS build cache after the workspace moved."
+    cmake --fresh --preset macos
+  else
+    cmake --preset macos
+  fi
+}
+
+link_obs_plugin() {
+  mkdir -p "$obs_plugins_dir"
+
+  if [[ -e "$obs_plugin_bundle" && ! -L "$obs_plugin_bundle" ]]; then
+    echo "Refusing to replace the existing copied OBS plugin at $obs_plugin_bundle." >&2
+    echo "Move it to a timestamped backup, then run this command again to create the development symlink." >&2
     exit 1
   fi
 
-  cd "$obs_project_dir"
-  cmake --preset macos
-  cmake --build --preset macos --config RelWithDebInfo
+  if [[ -L "$obs_plugin_bundle" ]]; then
+    rm -- "$obs_plugin_bundle"
+  fi
 
-  if [[ -d "$obs_plugin_bundle" ]] && diff -qr "$obs_build_bundle" "$obs_plugin_bundle" >/dev/null; then
-    echo "OBS plugin is already current."
+  ln -s "$obs_build_bundle" "$obs_plugin_bundle"
+  echo "Linked OBS to the current build. Fully quit and reopen OBS to load it."
+}
+
+ensure_obs_plugin() {
+  if [[ "$(uname)" != "Darwin" ]]; then
+    echo "Skipping hd-obs: the OBS plugin currently supports macOS only." >&2
     return
   fi
 
-  mkdir -p "$obs_plugins_dir"
-  if [[ -e "$obs_plugin_bundle" || -L "$obs_plugin_bundle" ]]; then
-    rm -rf -- "$obs_plugin_bundle"
-  fi
+  cd "$obs_project_dir"
+  configure_obs_build
+  cmake --build --preset macos --config RelWithDebInfo
 
-  cmake --install build_macos --config RelWithDebInfo
-  echo "Installed the current OBS plugin. Fully quit and reopen OBS to load it."
+  link_obs_plugin
 }
 
 start_web() {

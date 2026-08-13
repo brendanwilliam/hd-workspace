@@ -15,13 +15,28 @@ documentation, workspace configuration, and recording submodule revisions.
 
 ## Local workspace commands
 
-From this workspace root, `./startup.sh obs` builds the OBS plugin and
-installs it only when the installed `hd-obs.plugin` differs from the current
-build. `./startup.sh web` starts the Hands Diff development server.
-`./startup.sh` performs both actions in that order. `./install.sh` always
-reinstalls the OBS plugin, creates the local web environment file when needed,
-starts and migrates the local Postgres database, and then creates a production
-Hands Diff web build.
+The scripts locate the workspace from their own file location, so they remain
+usable after the workspace is moved or invoked from another directory. On
+macOS or Linux, use `./startup.sh` and `./install.sh`; on Windows, use
+`./startup.ps1` and `./install.ps1` from PowerShell. Each supports `obs` or
+`web` to operate on one component (and `startup` also supports `sync`).
+
+The OBS plugin currently supports macOS only. On Windows and Linux, a command
+without a component skips the plugin and continues with the web application.
+The web setup creates a local environment file when needed, starts and
+migrates the local Postgres database, and creates a production build. If the
+workspace was moved, the scripts automatically refresh the generated CMake
+cache before building the macOS plugin.
+
+On macOS, the scripts link OBS to the local `RelWithDebInfo` plugin build;
+they do not install development dependencies into system directories.
+
+For example, from Windows PowerShell run:
+
+```powershell
+.\install.ps1 web
+.\startup.ps1 web
+```
 
 Run `./startup.sh sync` to update both submodules to the latest commits on
 their configured `develop` branches. It refuses to run when either submodule
