@@ -1,6 +1,8 @@
 [submodule "hd-obs"]
 	path = hd-obs
 	url = https://github.com/brendanwilliam/hd-obs.git
+	branch = develop
 [submodule "hd-web"]
 	path = hd-web
 	url = https://github.com/brendanwilliam/hd-web.git
+	branch = develop
