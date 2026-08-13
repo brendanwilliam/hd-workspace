@@ -74,6 +74,9 @@ every branch. Check a recent signature with:
 git log -1 --show-signature
 ```
 
+This checkout is configured to verify that key locally through
+[`.git-allowed-signers`](.git-allowed-signers).
+
 ## Documentation
 
 Shared product, API, data-contract, and implementation material is indexed in
