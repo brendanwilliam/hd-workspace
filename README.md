@@ -23,6 +23,11 @@ reinstalls the OBS plugin, creates the local web environment file when needed,
 starts and migrates the local Postgres database, and then creates a production
 Hands Diff web build.
 
+Run `./startup.sh sync` to update both submodules to the latest commits on
+their configured `develop` branches. It refuses to run when either submodule
+has local changes and leaves the resulting workspace pointer updates
+uncommitted for review.
+
 ## Clone the workspace
 
 Clone with its submodules:
@@ -38,7 +43,10 @@ git submodule update --init --recursive
 ```
 
 To bring submodules to the commits recorded by the workspace after changing
-branches, run the same `git submodule update --init --recursive` command.
+branches, run the same `git submodule update --init --recursive` command. To
+advance the workspace pointers to the latest child `develop` commits, use
+`./startup.sh sync`, review the resulting gitlink changes, and commit them in
+the workspace repository.
 
 ## Working in a submodule
 
