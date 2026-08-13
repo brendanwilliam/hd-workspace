@@ -1,0 +1,6 @@
+{
+  "matched": "one supported candidate with the reporting PUUID and a start time within five minutes",
+  "input_only": "no candidate exists yet and retry remains scheduled",
+  "identity_not_found": "Account-V1 returned no identity in every routing region",
+  "ambiguous_match": "more than one candidate passed every verification check"
+}

@@ -1,0 +1,4 @@
+{
+  "events": [{ "second": 0, "kind": "left_click" }, { "second": 1, "kind": "right_click" }, { "second": 2, "kind": "bound_key" }],
+  "expected": { "seconds": [{ "second": 0, "apm": 20 }, { "second": 1, "apm": 40 }, { "second": 2, "apm": 60 }], "peak_apm": 60, "median_apm": 40 }
+}

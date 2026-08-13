@@ -1,0 +1,16 @@
+{
+  "fixture": "Sanitized Live Client allgamedata at supported-game start",
+  "captured_at": "2026-08-10",
+  "activePlayer": {
+    "riotIdGameName": "FixturePlayer",
+    "riotIdTagLine": "TEST",
+    "championName": "Ahri"
+  },
+  "gameData": {
+    "gameMode": "CLASSIC",
+    "gameTime": 0,
+    "mapNumber": 11,
+    "gameQueueConfigId": 420
+  },
+  "events": { "Events": [] }
+}

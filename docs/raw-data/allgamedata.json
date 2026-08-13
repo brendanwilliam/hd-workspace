@@ -1,0 +1,266 @@
+{
+	"activePlayer": {
+		"abilities": {
+			"E": {
+				"abilityLevel": 0,
+				"displayName": "Phase Dive",
+				"id": "EkkoE",
+				"rawDescription": "GeneratedTip_Spell_EkkoE_Description",
+				"rawDisplayName": "GeneratedTip_Spell_EkkoE_DisplayName"
+			},
+			"Passive": {
+				"displayName": "Z-Drive Resonance",
+				"id": "EkkoPassive",
+				"rawDescription": "GeneratedTip_Passive_EkkoPassive_Description",
+				"rawDisplayName": "GeneratedTip_Passive_EkkoPassive_DisplayName"
+			},
+			"Q": {
+				"abilityLevel": 1,
+				"displayName": "Timewinder",
+				"id": "EkkoQ",
+				"rawDescription": "GeneratedTip_Spell_EkkoQ_Description",
+				"rawDisplayName": "GeneratedTip_Spell_EkkoQ_DisplayName"
+			},
+			"R": {
+				"abilityLevel": 0,
+				"displayName": "Chronobreak",
+				"id": "EkkoR",
+				"rawDescription": "GeneratedTip_Spell_EkkoR_Description",
+				"rawDisplayName": "GeneratedTip_Spell_EkkoR_DisplayName"
+			},
+			"W": {
+				"abilityLevel": 0,
+				"displayName": "Parallel Convergence",
+				"id": "EkkoW",
+				"rawDescription": "GeneratedTip_Spell_EkkoW_Description",
+				"rawDisplayName": "GeneratedTip_Spell_EkkoW_DisplayName"
+			}
+		},
+		"championStats": {
+			"abilityHaste": 0.0,
+			"abilityPower": 21.0,
+			"armor": 32.0,
+			"armorPenetrationFlat": 0.0,
+			"armorPenetrationPercent": 1.0,
+			"attackDamage": 58.0,
+			"attackRange": 125.0,
+			"attackSpeed": 0.6880000233650208,
+			"bonusArmorPenetrationPercent": 1.0,
+			"bonusMagicPenetrationPercent": 1.0,
+			"critChance": 0.0,
+			"critDamage": 200.0,
+			"currentHealth": 655.0,
+			"healShieldPower": 0.0,
+			"healthRegenRate": 1.7999999523162842,
+			"lifeSteal": 0.0,
+			"magicLethality": 0.0,
+			"magicPenetrationFlat": 0.0,
+			"magicPenetrationPercent": 1.0,
+			"magicResist": 32.0,
+			"maxHealth": 655.0,
+			"moveSpeed": 777.5,
+			"omnivamp": 0.0,
+			"physicalLethality": 0.0,
+			"physicalVamp": 0.0,
+			"resourceMax": 280.0,
+			"resourceRegenRate": 1.399999976158142,
+			"resourceType": "MANA",
+			"resourceValue": 280.0,
+			"spellVamp": 0.0,
+			"tenacity": 5.0
+		},
+		"currentGold": 247.7470703125,
+		"fullRunes": {
+			"generalRunes": [
+				{
+					"displayName": "Hail of Blades",
+					"id": 9923,
+					"rawDescription": "perk_tooltip_HailOfBlades",
+					"rawDisplayName": "perk_displayname_HailOfBlades"
+				},
+				{
+					"displayName": "Sudden Impact",
+					"id": 8143,
+					"rawDescription": "perk_tooltip_SuddenImpact",
+					"rawDisplayName": "perk_displayname_SuddenImpact"
+				},
+				{
+					"displayName": "Sixth Sense",
+					"id": 8137,
+					"rawDescription": "perk_tooltip_SixthSense",
+					"rawDisplayName": "perk_displayname_SixthSense"
+				},
+				{
+					"displayName": "Relentless Hunter",
+					"id": 8105,
+					"rawDescription": "perk_tooltip_8105",
+					"rawDisplayName": "perk_displayname_8105"
+				},
+				{
+					"displayName": "Absolute Focus",
+					"id": 8233,
+					"rawDescription": "perk_tooltip_8233",
+					"rawDisplayName": "perk_displayname_8233"
+				},
+				{
+					"displayName": "Gathering Storm",
+					"id": 8236,
+					"rawDescription": "perk_tooltip_GatheringStorm",
+					"rawDisplayName": "perk_displayname_GatheringStorm"
+				}
+			],
+			"keystone": {
+				"displayName": "Hail of Blades",
+				"id": 9923,
+				"rawDescription": "perk_tooltip_HailOfBlades",
+				"rawDisplayName": "perk_displayname_HailOfBlades"
+			},
+			"primaryRuneTree": {
+				"displayName": "Domination",
+				"id": 8100,
+				"rawDescription": "perkstyle_tooltip_7200",
+				"rawDisplayName": "perkstyle_displayname_7200"
+			},
+			"secondaryRuneTree": {
+				"displayName": "Sorcery",
+				"id": 8200,
+				"rawDescription": "perkstyle_tooltip_7202",
+				"rawDisplayName": "perkstyle_displayname_7202"
+			},
+			"statRunes": [
+				{
+					"id": 5008,
+					"rawDescription": "perk_tooltip_StatModAdaptive"
+				},
+				{
+					"id": 5008,
+					"rawDescription": "perk_tooltip_StatModAdaptive"
+				},
+				{
+					"id": 5013,
+					"rawDescription": "perk_tooltip_StatModTenacity"
+				}
+			]
+		},
+		"level": 1,
+		"riotId": "squidbird#in4K",
+		"riotIdGameName": "squidbird",
+		"riotIdTagLine": "in4K",
+		"summonerName": "Ekko",
+		"teamRelativeColors": true
+	},
+	"allPlayers": [
+		{
+			"championName": "Ekko",
+			"isBot": false,
+			"isDead": false,
+			"items": [
+				{
+					"canUse": true,
+					"consumable": true,
+					"count": 1,
+					"displayName": "Health Potion",
+					"itemID": 2003,
+					"price": 50,
+					"rawDescription": "GeneratedTip_Item_2003_Description",
+					"rawDisplayName": "Item_2003_Name",
+					"slot": 1
+				},
+				{
+					"canUse": false,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Boots",
+					"itemID": 1001,
+					"price": 300,
+					"rawDescription": "GeneratedTip_Item_1001_Description",
+					"rawDisplayName": "Item_1001_Name",
+					"slot": 2
+				},
+				{
+					"canUse": true,
+					"consumable": false,
+					"count": 1,
+					"displayName": "Stealth Ward",
+					"itemID": 3340,
+					"price": 0,
+					"rawDescription": "GeneratedTip_Item_3340_Description",
+					"rawDisplayName": "Item_3340_Name",
+					"slot": 6
+				}
+			],
+			"level": 1,
+			"position": "NONE",
+			"rawChampionName": "game_character_displayname_Ekko",
+			"rawSkinName": "game_character_skin_displayname_Ekko_46",
+			"respawnTimer": 0.0,
+			"riotId": "squidbird#in4K",
+			"riotIdGameName": "squidbird",
+			"riotIdTagLine": "in4K",
+			"runes": {
+				"keystone": {
+					"displayName": "Hail of Blades",
+					"id": 9923,
+					"rawDescription": "perk_tooltip_HailOfBlades",
+					"rawDisplayName": "perk_displayname_HailOfBlades"
+				},
+				"primaryRuneTree": {
+					"displayName": "Domination",
+					"id": 8100,
+					"rawDescription": "perkstyle_tooltip_7200",
+					"rawDisplayName": "perkstyle_displayname_7200"
+				},
+				"secondaryRuneTree": {
+					"displayName": "Sorcery",
+					"id": 8200,
+					"rawDescription": "perkstyle_tooltip_7202",
+					"rawDisplayName": "perkstyle_displayname_7202"
+				}
+			},
+			"scores": {
+				"assists": 0,
+				"creepScore": 0,
+				"deaths": 0,
+				"kills": 0,
+				"wardScore": 0.0
+			},
+			"skinID": 46,
+			"skinName": "Prestige Star Guardian Ekko",
+			"summonerName": "Ekko",
+			"summonerSpells": {
+				"summonerSpellOne": {
+					"displayName": "Flash",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+				},
+				"summonerSpellTwo": {
+					"displayName": "Primal Smite",
+					"rawDescription": "GeneratedTip_SummonerSpell_SummonerSmiteAvatarDefensive_Description",
+					"rawDisplayName": "GeneratedTip_SummonerSpell_SummonerSmiteAvatarDefensive_DisplayName"
+				}
+			},
+			"team": "ORDER"
+		}
+	],
+	"events": {
+		"Events": [
+			{
+				"EventID": 0,
+				"EventName": "GameStart",
+				"EventTime": 0.03359999880194664
+			},
+			{
+				"EventID": 1,
+				"EventName": "MinionsSpawning",
+				"EventTime": 30.044790267944337
+			}
+		]
+	},
+	"gameData": {
+		"gameMode": "PRACTICETOOL",
+		"gameTime": 333.2637939453125,
+		"mapName": "Map11",
+		"mapNumber": 11,
+		"mapTerrain": "Default"
+	}
+}
